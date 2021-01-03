@@ -34,3 +34,29 @@ function Zadanie3() {
         alert(res);
     }
 }
+
+function Zadanie4() {
+    var chislo = prompt('На что Вы хотите умножить массив?')
+    scalarMultiplication(chislo);
+
+    function scalarMultiplication() {
+        var arr = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+        ];
+        console.log('Массив до изменений:');
+        console.log(arr[0]);
+        console.log(arr[1]);
+        console.log(arr[2]);
+        for (var i = 0; i < 3; i++) {
+            for (var j = 0; j < 3; j++) {
+                arr[i][j] = arr[i][j] * chislo;
+            }
+        }
+        console.log('Массив после изменений:');
+        console.log(arr[0]);
+        console.log(arr[1]);
+        console.log(arr[2]);
+    }
+}
