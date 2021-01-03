@@ -14,8 +14,18 @@ function Zadanie1() {
 }
 
 function Zadanie2() {
+    var arr = [1, 2, 3, 4, 5, 6, 7];
+    arrayCut(arr);
 
-
+    function arrayCut() {
+        var leng = arr.length;
+        var len = leng;
+        for (var i = 0; i < leng; i++) {
+            console.log(len, 'осталось', arr);
+            var popped = arr.pop();
+            len = len - 1;
+        }
+    }
 }
 
 function Zadanie3() {
