@@ -1,6 +1,6 @@
 function Zadanie1() {
-    var str = ' ';
-    var user = {
+    let str = ' ';
+    let user = {
         first_name: 'Дарья',
         last_name: 'Натальина'
     }
@@ -14,28 +14,29 @@ function Zadanie1() {
 }
 
 function Zadanie2() {
-    var arr = [1, 2, 3, 4, 5, 6, 7];
+    let arr = [1, 2, 3, 4, 5, 6, 7];
     arrayCut(arr);
 
     function arrayCut() {
-        var leng = arr.length;
-        var len = leng;
-        for (var i = 0; i < leng; i++) {
+        let leng = arr.length;
+        let len = leng;
+        for (let i = 0; i < leng-1; i++) {
+            let popped = arr.pop();
             console.log(len, 'осталось', arr);
-            var popped = arr.pop();
             len = len - 1;
         }
+        console.log(len);
     }
 }
 
 function Zadanie3() {
-    var str = prompt('Введите слово для проверки:');
+    let str = prompt('Введите слово для проверки:');
     isPalindrome(str);
 
     function isPalindrome() {
         arr = str.split('');
-        var len = arr.length;
-        var res = true;
+        let len = arr.length;
+        let res = true;
         for (let i = 0; i < len / 2; i++) {
             if (arr[i] != arr[len - i - 1]) {
                 res = false;
@@ -46,11 +47,11 @@ function Zadanie3() {
 }
 
 function Zadanie4() {
-    var chislo = prompt('На что Вы хотите умножить массив?')
+    let chislo = prompt('На что Вы хотите умножить массив?')
     scalarMultiplication(chislo);
 
     function scalarMultiplication() {
-        var arr = [
+        let arr = [
         [1, 2, 3],
         [4, 5, 6],
         [7, 8, 9]
@@ -59,8 +60,8 @@ function Zadanie4() {
         console.log(arr[0]);
         console.log(arr[1]);
         console.log(arr[2]);
-        for (var i = 0; i < 3; i++) {
-            for (var j = 0; j < 3; j++) {
+        for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 3; j++) {
                 arr[i][j] = arr[i][j] * chislo;
             }
         }
